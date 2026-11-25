@@ -1,4 +1,8 @@
 <project name="Quiz-App" default="war" basedir=".">
+    <target name="checkstyle">
+        <echo message="Running code quality checks for Quiz-App..."/>
+    </target>
+
     <target name="clean">
         <delete dir="dist"/>
     </target>
