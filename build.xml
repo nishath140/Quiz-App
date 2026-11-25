@@ -2,12 +2,18 @@
     <target name="checkstyle">
         <echo message="Running code quality checks for Quiz-App..."/>
     </target>
-<target name="test">
+
+    <target name="test">
         <mkdir dir="reports"/>
         <echo file="reports/TEST-QuizAppTest.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="QuizAppTest" tests="1" failures="0" errors="0" time="0.01">
     <testcase classname="QuizAppTest" name="testAppLoad" time="0.01"/>
 </testsuite>]]></echo>
+    </target>
+
+    <target name="clean">
+        <delete dir="dist"/>
+        <delete dir="reports"/>
     </target>
 
     <target name="war" depends="clean">
