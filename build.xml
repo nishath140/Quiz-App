@@ -1,0 +1,12 @@
+<project name="Quiz-App" default="war" basedir=".">
+    <target name="clean">
+        <delete dir="dist"/>
+    </target>
+
+    <target name="war" depends="clean">
+        <mkdir dir="dist"/>
+        <war destfile="dist/Quiz-App.war" needxmlfile="false">
+            <fileset dir="." includes="*.html, *.css, *.js"/>
+        </war>
+    </target>
+</project>
